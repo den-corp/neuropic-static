@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neuro Style Transfer</title>
+</head>
+<body>
+    <h1>Neuro Style Transfer</h1>
+    
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="originalPic">Choose Original Image:</label>
+        <input type="file" name="originalPic" accept="image/*" required>
+        <br>
+        <label for="stylePic">Choose Style Image:</label>
+        <input type="file" name="stylePic" accept="image/*" required>
+        <br>
+        <button type="submit">Upload and Generate</button>
+    </form>
+    
+    <br>
+    <hr>
+    
+    <h2>Generated Image:</h2>
+    <img src="#" alt="Generated Image" id="generatedImage">
+    
+    <script>
+        // JavaScript code to display the generated image after submission
+        document.querySelector('form').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+            
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.blob())
+            .then(blob => {
+                const url = URL.createObjectURL(blob);
+                document.querySelector('#generatedImage').src = url;
+            })
+            .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
