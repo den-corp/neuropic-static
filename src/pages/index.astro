@@ -1,0 +1,36 @@
+---
+import Layout from "@layouts/Default.astro";
+import HeroMain from "@components/hero/HeroMain.astro";
+import Section from "@components/section/Section.astro";
+import SectionMuted from "@components/section/SectionMuted.astro";
+import Container from "@components/section/Container.astro";
+import SectionTitle from "@components/section/SectionTitle.astro";
+import GenerateSection from "@components/content/GenerateSection.astro";
+import AboutSection from "@components/content/AboutSection.astro";
+
+---
+
+<Layout title="Home">
+  <HeroMain />
+
+  <Section>
+    <Container>
+      <SectionTitle
+        minititle="Творческая лаборатория"
+        class="'mx-auto text-center'"
+      />
+      <GenerateSection />
+    </Container>
+  </Section>
+
+  <SectionMuted>
+    <Container>
+      <SectionTitle
+        minititle="О проекте"
+        class="'mx-auto text-center'"
+      />
+      <AboutSection />
+    </Container>
+  </SectionMuted>
+
+</Layout>

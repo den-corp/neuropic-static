@@ -1,0 +1,70 @@
+---
+import Logo from "@components/base/Logo.astro";
+import ThemeToggler from "@components/base/ThemeToggler.astro";
+import Hamburger from "@components/base/Hamburger.astro";
+---
+
+<div
+  x-cloak
+  x-data="navbar()"
+  x-on:scroll.window="scroll()"
+  class="fixed top-0 left-0 w-full z-50 transition-all duration-300"
+  :class="scrolled || $store.app.mobileOpen ? 'bg-white dark:bg-muted-900 shadow-lg shadow-muted-300/30 dark:shadow-muted-900/40' : ''"
+>
+  <div
+    class="w-full max-w-7xl mx-auto flex items-center justify-between pl-4 pr-4 lg:pr-4 font-sans"
+  >
+    <!-- Left -->
+    <div class="w-full lg:w-auto flex items-center gap-4">
+      <a href="/" class="flex items-center gap-4">
+        <div>
+          <Logo class="'w-30 h-12'" />
+        </div>
+      </a>
+    </div>
+
+    <!-- Center -->
+    <div
+      class="flex-col items-center lg:justify-end gap-x-20"
+      :class="$store.app.mobileOpen ? 'absolute top-[80px] left-0 w-full flex text-center px-12 pt-2 pb-6 border-t border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 shadow-lg shadow-muted-300/40 dark:shadow-muted-900/50' : 'hidden lg:flex lg:flex-row'"
+    >
+      <div class="flex flex-col lg:flex-row items-center gap-x-10">
+        <div
+          class="relative text-xl border-2 border-purple-800 px-3 py-3 lg:py-2 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300"
+          :class="activeStep === 'spy-1' ? 'text-purple-800 after:bg-purple-300' : 'text-purple-800 dark:text-purple-800 hover:text-purple-300 dark:hover:text-purple-400 dark:hover:border-purple-400 after:w-0'"
+        >
+          <a href="#generate">Погнали!</a>
+        </div>
+        <div
+          class="relative text-md py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300"
+          :class="activeStep === 'spy-2' ? 'text-orange-800 after:bg-orange-300 after:w-full' : 'text-amber-500 dark:text-amber-500 hover:text-orange-300 dark:hover:text-amber-400 dark:hover:border-amber-400 after:w-0'"
+        >
+          <a href="#about">Что это?</a>
+        </div>
+      </div>
+    </div>
+    <div
+      class="flex-col items-center lg:justify-end gap-x-10"
+      :class="$store.app.mobileOpen ? 'absolute top-[80px] left-0 w-full flex text-center px-12 pt-2 pb-6 border-t border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-900 shadow-lg shadow-muted-300/40 dark:shadow-muted-900/50'"
+    >
+      <div class="py-6 lg:py-6">
+        <ThemeToggler />
+      </div>
+    </div>
+    <!-- <div class="flex flex-col lg:flex-row items-center gap-x-10">
+      <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300"
+        :class="activeStep === 'spy-1' ? 'text-purple-800 after:bg-purple-300 after:w-full' : 'text-purple-800 dark:text-purple-800 hover:text-purple-300 dark:hover:text-muted-100 after:w-0'"
+      >
+      <a href="#"><TelegramIcon /></i></a>
+      </div>
+      <div class="relative py-3 lg:py-5 after:content-[''] after:absolute after:-bottom-1.5 after:left-0 after:h-[3px] after:rounded-t-full after:transition-all after:duration-300 transition-colors duration-300"
+        :class="activeStep === 'spy-2' ? 'text-orange-800 after:bg-orange-300 after:w-full' : 'text-orange-800 dark:text-orange-800 hover:text-orange-300 dark:hover:text-muted-100 after:w-0'"
+      >
+        <a href="#"><GitHubIcon /></i></a>
+      </div>
+      <div class="py-3 lg:py-5">
+        <ThemeToggler />
+      </div>
+    </div> -->
+  </div>
+</div>

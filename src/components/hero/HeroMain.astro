@@ -1,0 +1,122 @@
+---
+import ButtonSub from "@components/base/ButtonSub.astro";
+---
+
+<div
+  class="min-h-screen w-full overflow-hidden bg-muted-100 dark:bg-muted-1000"
+>
+  <div class="min-h-screen w-full max-w-7xl mx-auto flex items-center px-4 mb-20">
+    <div class="w-full grid grid-cols-12 gap-10">
+      <div class="col-span-12 ltablet:col-span-4 lg:col-span-4">
+        <div
+          class="h-full ptablet:max-w-lg ptablet:mx-auto flex items-center mb-8 ltablet:mb-0 lg:mb-0"
+        >
+          <div
+            class="text-center ltablet:text-left lg:text-left font-sans space-y-4"
+            >
+            <div class="grid grid-cols-12 gap-4 mt-16">
+              <h1
+                class="col-start-1 col-span-12 font-medium text-xl ptablet:text-4xl lg:text-4xl text-muted-500 dark:text-white"
+              >
+                Создай картинку
+              </h1>
+              <p
+                class="col-start-2 col-span-12 text-xl text-purple-500 dark:text-purple-800"
+              >
+                Добавь творчество в свой проект
+              </p>
+              <p
+                class="col-start-3 col-span-12 text-sm text-muted-500 dark:text-white"
+              >
+                Отрисуй свою картинку в стиле любимого художника и добавь ее в
+                свой проект. Представь себе, какой может получиться сайт в стиле
+                Сальвадора Дали или презентацию в стиле Леонардо да Винчи. Здесь
+                это возможно!
+              </p>
+              <div class="col-start-5 col-span-4">
+                <ButtonSub to={"/"} class="'min-w-[130px]'">Создать</ButtonSub>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative col-span-12 ltablet:col-span-4 lg:col-span-8">
+        <div class="relative lg:top-16 grid grid-cols-12">
+          <img
+            src="/img/illustrations/img-main-sect/start.png"
+            class="col-start-1 col-span-5 block dark:hidden w-full ltablet:max-w-[540px] max-w-[620px] mx-auto"
+            alt="start image"
+          />
+          <img
+            src="/img/illustrations/img-main-sect/style.png"
+            class="-mt-20 md:-mt-28 col-start-5 col-span-5 block dark:hidden w-full ltablet:max-w-[540px] max-w-[620px] mx-auto"
+            alt="style image"
+          />
+          <img
+            src="/img/illustrations/img-main-sect/result.png"
+            class="-mt-20 md:-mt-36 col-start-2 col-span-5 block dark:hidden w-full ltablet:max-w-[540px] max-w-[620px] mx-auto"
+            alt="result image"
+          />
+          <img
+            src="/img/illustrations/img-main-sect/sequencing-dark.svg"
+            class="-mt-44 md:-mt-80 col-start-7 col-span-5 block dark:hidden w-full ltablet:max-w-[540px] max-w-[620px] mx-auto"
+            alt="result image"
+          />
+
+          <!-- dark -->
+          <img
+            src="/img/illustrations/img-main-sect/start.png"
+            class="col-start-1 col-span-5 hidden dark:block w-full ltablet:max-w-[540px] max-w-[620px] mx-auto"
+            alt="start image"
+          />
+          <img
+            src="/img/illustrations/img-main-sect/style.png"
+            class="-mt-20 md:-mt-28 col-start-5 col-span-5 hidden dark:block w-full ltablet:max-w-[540px] max-w-[620px] mx-auto"
+            alt="style image"
+          />
+          <img
+            src="/img/illustrations/img-main-sect/result.png"
+            class="-mt-20 md:-mt-36 col-start-2 col-span-5 hidden dark:block w-full ltablet:max-w-[540px] max-w-[620px] mx-auto"
+            alt="result image"
+          />
+          <img
+            src="/img/illustrations/img-main-sect/sequencing-white.svg"
+            class="-mt-44 md:-mt-80 col-start-7 col-span-5 hidden dark:block w-full ltablet:max-w-[540px] max-w-[620px] mx-auto"
+            alt="result image"
+          />
+        </div>
+      </div>
+      <!-- <div class="col-span-12 ltablet:col-span-4 lg:col-span-4">
+        <div
+          class="h-full ptablet:max-w-lg ptablet:mx-auto flex items-center mb-8 ltablet:mb-0 lg:mb-0"
+        >
+          <div
+            class="text-center ltablet:text-left lg:text-left font-sans space-y-4"
+          >
+            <div class="">
+              <ButtonSub to={"/"} class="'min-w-[130px]'">Создать</ButtonSub>
+            </div>
+            <div class="grid grid-cols-12 gap-4 mt-16"></div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- Decoration -->
+      <!-- <div
+          class="absolute top-28 left-72 h-10 w-10 hidden md:flex items-center justify-center rounded-full text-xl bg-white dark:bg-gray-900 shadow-xl shadow-muted-300/30 dark:shadow-muted-900/50"
+        >
+        👨‍💻
+        </div>
+        <div
+          class="absolute top-32 left-20 h-10 w-10 hidden md:flex items-center justify-center rounded-full text-xl bg-white dark:bg-gray-900 shadow-xl shadow-muted-300/30 dark:shadow-muted-900/50"
+        >
+        🎨
+        </div>
+        <div
+          class="absolute bottom-28 left-72 h-12 w-12 hidden md:flex items-center justify-center rounded-full text-3xl bg-white dark:bg-gray-900 shadow-xl shadow-muted-300/30 dark:shadow-muted-900/50"
+        >
+          🪄
+        </div> -->
+    </div>
+  </div>
+</div>
