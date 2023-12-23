@@ -118,7 +118,7 @@ import ButtonSub from "@components/base/ButtonSub.astro";
       e.preventDefault();
       const formData = new FormData(document.querySelector("#uploadForm"));
 
-      fetch("http://localhost:2500/upload", {
+      fetch("http://45.147.179.195:8080/", {
         // Replace with your actual server address
         method: "POST",
         body: formData,
